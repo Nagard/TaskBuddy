@@ -1,0 +1,79 @@
+/*
+style.css
+Einfache Styles für TaskBuddy
+*/
+
+/* Allgemeine Seite */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+}
+
+/* Überschrift */
+h1 {
+  text-align: center;
+}
+
+/* Input und Button */
+.input-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#addTaskBtn {
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Aufgabenliste */
+#taskList {
+  list-style: none;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Einzelne Aufgabe */
+.task-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Checkbox */
+.task-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Erledigte Aufgabe ausgegraut/durchgestrichen */
+.task-item.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Lösch-Button */
+.delete-btn {
+  margin-left: auto;
+  cursor: pointer;
+  background: #e74c3c;
+  border: none;
+  padding: 5px 8px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Hover-Effekt für Löschen */
+.delete-btn:hover {
+  background: #c0392b;
+}

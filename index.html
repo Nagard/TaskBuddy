@@ -1,0 +1,31 @@
+<!--
+index.html
+Hauptseite, die das Grundgerüst der Anwendung darstellt.
+Enthält das Eingabefeld, den Button und die Aufgabenliste.
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>TaskBuddy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>TaskBuddy</h1>
+
+  <!-- Eingabefeld + Hinzufügen-Button -->
+  <div class="input-container">
+    <input type="text" id="taskInput" placeholder="Neue Aufgabe..." />
+    <button id="addTaskBtn">Hinzufügen</button>
+  </div>
+
+  <!-- Aufgabenliste -->
+  <ul id="taskList"></ul>
+
+  <!-- JS-Dateien laden -->
+  <script src="storage.js"></script>
+  <script src="taskManager.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
