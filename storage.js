@@ -1,9 +1,17 @@
 const storage = {
   save(tasks) {
-    // Kommt in US2
+    localStorage.setItem('taskbuddy_tasks', JSON.stringify(tasks));
   },
   load() {
-    // Kommt in US2
-    return [];
-  }
+	  const data = localStorage.getItem('taskbuddy_tasks');
+	  if (data) {
+		try {
+		  return JSON.parse(data);
+		} catch(e) {
+		  console.error("Fehler beim Parsen des localStorage:", e);
+		  return [];
+		}
+	  }
+	  return [];
+}
 };
