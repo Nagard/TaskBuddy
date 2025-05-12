@@ -12,13 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+    
   function addNewTask() {
-    const text = taskInput.value.trim();
-    if (text !== '') {
-      taskManager.addTask(text);
-      taskManager.renderTasks();  // wird später ausgebaut
-      // Speicher-Logik (localStorage) mache ich in US2
-      taskInput.value = '';
-    }
-  }
+	  const text = taskInput.value.trim();
+	  const errorLabel = document.getElementById('errorLabel');
+
+	  if (!text) {
+		errorLabel.textContent = "Bitte gib eine Aufgabe ein!";
+		errorLabel.style.display = "inline";
+		return;
+	  } else {
+			errorLabel.style.display = "none";
+	  }
+
+	  taskManager.addTask(text);
+	  taskManager.renderTasks();
+	  taskInput.value = '';
+}
+
 });
