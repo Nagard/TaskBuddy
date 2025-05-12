@@ -1,9 +1,9 @@
 const storage = {
   save(tasks) {
-    // Kommt in US2
+    localStorage.setItem('taskbuddy_tasks', JSON.stringify(tasks));
   },
   load() {
-    // Kommt in US2
-    return [];
+    const data = localStorage.getItem('taskbuddy_tasks');
+    return data ? JSON.parse(data) : [];
   }
 };
