@@ -18,14 +18,26 @@ const taskManager = {
     tasks.push(newTask);
   },
 
-  renderTasks() {
-    const listElement = document.getElementById('taskList');
-    listElement.innerHTML = '';
+	renderTasks() {
+	  const listElement = document.getElementById('taskList');
+	  listElement.innerHTML = '';
 
-    tasks.forEach(task => {
-      const li = document.createElement('li');
-      li.textContent = task.text;
-      listElement.appendChild(li);
-    });
-  }
+	  if (tasks.length === 0) {
+		const noTasksMsg = document.createElement('li');
+		noTasksMsg.textContent = "Keine Aufgaben vorhanden.";
+		noTasksMsg.style.fontStyle = "italic";
+		listElement.appendChild(noTasksMsg);
+		return;
+	  }
+
+	  tasks.forEach(task => {
+		const li = document.createElement('li');
+		li.textContent = task.text;
+		listElement.appendChild(li);
+	  });
+	}
+  
+  
+  
+  
 };
