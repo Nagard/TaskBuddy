@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#addTaskBtn {
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Leere taskList-Styles */
+#taskList {
+  list-style: none;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+}

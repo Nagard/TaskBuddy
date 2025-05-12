@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>TaskBuddy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>TaskBuddy</h1>
+
+  <div class="input-container">
+    <input type="text" id="taskInput" placeholder="Neue Aufgabe..." />
+    <button id="addTaskBtn">Hinzufügen</button>
+    <!-- Hier später Fehlermeldungen, falls nötig -->
+    <span id="errorLabel" style="display:none; color:red; margin-left:10px;"></span>
+  </div>
+
+  <ul id="taskList"></ul>
+
+  <script src="storage.js"></script>
+  <script src="taskManager.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
