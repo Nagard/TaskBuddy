@@ -33,3 +33,10 @@ h1 {
   margin: 0 auto;
   padding: 0;
 }
+
+.task-item.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+
