@@ -18,7 +18,7 @@ const taskManager = {
     tasks.push(newTask);
   },
 
-  toggleTask(id) {
+  toggleDoneStatus(id) {
     tasks.forEach(task => {
       if (task.id === id) {
         task.done = !task.done;
@@ -50,7 +50,7 @@ const taskManager = {
       checkbox.type = 'checkbox';
       checkbox.checked = task.done;
       checkbox.addEventListener('change', () => {
-        this.toggleTask(task.id);
+        this.toggleDoneStatus(task.id);
         this.renderTasks();
         storage.save(tasks);
       });
