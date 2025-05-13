@@ -68,11 +68,16 @@ const taskManager = {
       const deleteBtn = document.createElement('button');
       deleteBtn.innerText = '🗑';
       deleteBtn.classList.add('delete-btn');
-      deleteBtn.addEventListener('click', () => {
-        this.deleteTask(task.id);
-        this.renderTasks();
-        storage.save(tasks);
-      });
+      
+	  deleteBtn.addEventListener('click', () => {
+	   const confirmDelete = confirm("Bist du sicher, dass du die Aufgabe löschen möchtest?");
+	   if (confirmDelete) {
+		 this.deleteTask(task.id);
+		 this.renderTasks();
+		 storage.save(tasks);
+	   }
+	 });
+		  
       li.appendChild(deleteBtn);
 
       listElement.appendChild(li);
