@@ -25,6 +25,10 @@ const taskManager = {
       }
     });
   },
+  
+  deleteTask(id) {
+    tasks = tasks.filter(task => task.id !== id);
+  },
 
   renderTasks() {
     const listElement = document.getElementById('taskList');
@@ -56,9 +60,20 @@ const taskManager = {
       });
       li.appendChild(checkbox);
 
-      // Aufgabentext
+      // Text
       const textNode = document.createTextNode(task.text);
       li.appendChild(textNode);
+
+      // Löschen-Button
+      const deleteBtn = document.createElement('button');
+      deleteBtn.innerText = '🗑';
+      deleteBtn.classList.add('delete-btn');
+      deleteBtn.addEventListener('click', () => {
+        this.deleteTask(task.id);
+        this.renderTasks();
+        storage.save(tasks);
+      });
+      li.appendChild(deleteBtn);
 
       listElement.appendChild(li);
     });
